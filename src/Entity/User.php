@@ -161,6 +161,6 @@ class User implements UserInterface
 
     public function getUsername()
     {
-        return $this->firstname;
+        return $this->telephone;
     }
 }
