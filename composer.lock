@@ -4,7 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "content-hash": "849315b618f1992fb727d24c11a4515d",
+=======
+    "content-hash": "2a2debfa0acae5554ed8f0b41208614f",
+>>>>>>> 74530699fb46a7469f4355e94b12dfb807537a3d
     "packages": [
         {
             "name": "api-platform/api-pack",
@@ -857,6 +861,7 @@
         },
         {
             "name": "doctrine/inflector",
+<<<<<<< HEAD
             "version": "1.4.1",
             "source": {
                 "type": "git",
@@ -867,6 +872,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/doctrine/inflector/zipball/4111f6853aea6f28b2b1dcfdde83d12dd3d5e6e3",
                 "reference": "4111f6853aea6f28b2b1dcfdde83d12dd3d5e6e3",
+=======
+            "version": "1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/inflector.git",
+                "reference": "ab5de36233a1995f9c776c741b803eb8207aebef"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/inflector/zipball/ab5de36233a1995f9c776c741b803eb8207aebef",
+                "reference": "ab5de36233a1995f9c776c741b803eb8207aebef",
+>>>>>>> 74530699fb46a7469f4355e94b12dfb807537a3d
                 "shasum": ""
             },
             "require": {
@@ -930,6 +947,7 @@
                 "strings",
                 "uppercase",
                 "words"
+<<<<<<< HEAD
             ],
             "funding": [
                 {
@@ -946,6 +964,24 @@
                 }
             ],
             "time": "2020-05-09T15:09:09+00:00"
+=======
+            ],
+            "funding": [
+                {
+                    "url": "https://www.doctrine-project.org/sponsorship.html",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.patreon.com/phpdoctrine",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Finflector",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-05-06T11:01:57+00:00"
+>>>>>>> 74530699fb46a7469f4355e94b12dfb807537a3d
         },
         {
             "name": "doctrine/instantiator",
@@ -1476,6 +1512,56 @@
                 "rest"
             ],
             "time": "2020-04-27T06:40:36+00:00"
+        },
+        {
+            "name": "fzaninotto/faker",
+            "version": "v1.9.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fzaninotto/Faker.git",
+                "reference": "fc10d778e4b84d5bd315dad194661e091d307c6f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/fc10d778e4b84d5bd315dad194661e091d307c6f",
+                "reference": "fc10d778e4b84d5bd315dad194661e091d307c6f",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3.3 || ^7.0"
+            },
+            "require-dev": {
+                "ext-intl": "*",
+                "phpunit/phpunit": "^4.8.35 || ^5.7",
+                "squizlabs/php_codesniffer": "^2.9.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.9-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Faker\\": "src/Faker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "François Zaninotto"
+                }
+            ],
+            "description": "Faker is a PHP library that generates fake data for you.",
+            "keywords": [
+                "data",
+                "faker",
+                "fixtures"
+            ],
+            "time": "2019-12-12T13:22:17+00:00"
         },
         {
             "name": "jdorn/sql-formatter",
@@ -3651,6 +3737,7 @@
                 }
             ],
             "time": "2020-05-09T12:10:32+00:00"
+<<<<<<< HEAD
         },
         {
             "name": "symfony/form",
@@ -3749,6 +3836,8 @@
                 }
             ],
             "time": "2020-04-28T17:55:16+00:00"
+=======
+>>>>>>> 74530699fb46a7469f4355e94b12dfb807537a3d
         },
         {
             "name": "symfony/framework-bundle",

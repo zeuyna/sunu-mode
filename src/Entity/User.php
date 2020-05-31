@@ -52,7 +52,7 @@ class User implements UserInterface
     private $email;
 
     /**
-     * @ORM\Column(type="bigint")
+     * @ORM\Column(type="string", length=255)
      */
     private $telephone;
 
@@ -66,7 +66,16 @@ class User implements UserInterface
      * @ORM\Column(type="string", length=255)
      */
     private $password;
+<<<<<<< HEAD
      public$confirm_password;
+=======
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $isActive;
+
+>>>>>>> 74530699fb46a7469f4355e94b12dfb807537a3d
     public function __construct()
     {
         $this->isActive = true;
@@ -178,6 +187,6 @@ class User implements UserInterface
 
     public function getUsername()
     {
-        return $this->firstname;
+        return $this->telephone;
     }
 }
