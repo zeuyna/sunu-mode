@@ -50,6 +50,12 @@ class Article
      */
     private $color;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Cart::class, inversedBy="article")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $user;
+
     public function __construct()
     {
         $this->color = new ArrayCollection();
@@ -142,6 +148,18 @@ class Article
         if ($this->color->contains($color)) {
             $this->color->removeElement($color);
         }
+
+        return $this;
+    }
+
+    public function getUser(): ?Cart
+    {
+        return $this->user;
+    }
+
+    public function setUser(?Cart $user): self
+    {
+        $this->user = $user;
 
         return $this;
     }
