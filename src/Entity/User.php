@@ -7,7 +7,24 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
- * @ApiResource()
+ * @ApiResource(
+ * itemOperation = {
+ * "get" = { },
+ * 
+ * "put" = {
+ * "access_control"="is_granted( 'put' , object)"
+ *    },
+ * "delete" = {
+ * "access_control"="is_granted('DELETE' , object)"
+ *        }     
+ * },
+ * collectionOperations = {
+ *   "get" = {},
+ *   "post" = {"access_control"="is_granted('DELETE' , object)"}
+ *   
+ * 
+ * }
+ * )
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  */
 class User implements UserInterface
@@ -49,7 +66,7 @@ class User implements UserInterface
      * @ORM\Column(type="string", length=255)
      */
     private $password;
-
+     public$confirm_password;
     public function __construct()
     {
         $this->isActive = true;
