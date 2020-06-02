@@ -1,7 +1,7 @@
 
 <?php
 
-namespace App\Security\ArticleVoter;
+namespace App\Security\Voter\ArticleVoter;
 
 use App\Entity\Article;
 
