@@ -27,14 +27,14 @@ class UserVoter extends Voter{
         if($subject instanceof User) {
             switch ($attribute) {
                 case 'PUT':
-                    return $user->getRoles()[0] === "ROLE_ADMIN" && ($subject->getRoles()[0] === "ROLE_CASHIER" || $subject->getRoles()[0] === "ROLE_PARTENAIRE");
+                    return $user->getId() === $subject->getId();
                 break;
                 case 'POST':
-                    return $user->getRoles()[0] === "ROLE_ADMIN" && ($subject->getRoles()[0] === "ROLE_CASHIER" || $subject->getRoles()[0] === "ROLE_PARTENAIRE");
+                    return $user->getRoles()[0] === "ROLE_SUPER_ADMIN" && ($subject->getRoles()[0] === "ROLE_ADMIN" );
                 break;
 
                 case 'DELETE':
-                    return $user->getRoles()[0] === "ROLE_ADMIN" && ($subject->getRoles()[0] === "ROLE_CASHIER" || $subject->getRoles()[0] === "ROLE_PARTENAIRE");
+                    return $user->getRoles()[0] === "ROLE_ADMIN" && ($subject->getRoles()[0] === "ROLE_CLIENT" );
                 break;
                 default:
                     return false;

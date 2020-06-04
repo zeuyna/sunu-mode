@@ -6,7 +6,24 @@ use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ApiResource()
+ * @ApiResource(
+ * itemOperation = {
+ * "get" = { },
+ * 
+ * "put" = { 
+ * "access_control"="is_granted( 'PUT' , object)"
+ *    },
+ * "delete" = {
+ * "access_control"="is_granted('DELETE' , object)"
+ *        }     
+ * },
+ * collectionOperations = {
+ *   "get" = {},
+ *   "post" = {"access_control"="is_granted('DELETE' , object)"}
+ *   
+ * 
+ * }
+ * )
  * @ORM\Entity(repositoryClass="App\Repository\RoleRepository")
  */
 class Role
