@@ -1,7 +1,7 @@
 
 <?php
 namespace App\Security\Voter;
-use App\Entity\Article;
+use App\Entity\Category;
 
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\Security\Core\Authorization\Voter\Voter;
