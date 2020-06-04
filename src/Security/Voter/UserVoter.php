@@ -32,13 +32,12 @@ class UserVoter extends Voter{
                 case 'POST':
                     return $user->getRoles()[0] === "ROLE_SUPER_ADMIN" && ($subject->getRoles()[0] === "ROLE_ADMIN" );
                 break;
-
                 case 'DELETE':
                     return $user->getRoles()[0] === "ROLE_ADMIN" && ($subject->getRoles()[0] === "ROLE_CLIENT" );
                 break;
                 default:
-                    return false;
-                break;
+                    return false;         
+                      break;
             }
         }
     }
