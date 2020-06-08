@@ -6,7 +6,24 @@ use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ApiResource()
+ * @ApiResource(
+ * itemOperations = {
+ *          "get" ,
+ *          "put" = {
+ *              "security"="is_granted('ROLE_ADMIN')"
+ *          },
+ *          "delete" = {
+ *              "security"="is_granted('ROLE_ADMIN')"
+ *          }
+ *      },
+ *      collectionOperations = {
+ *          "get" ,
+ *          "post" = {
+ *              "security"="is_granted('ROLE_ADMIN')"
+ *          }
+ *      }
+
+ * )
  * @ORM\Entity(repositoryClass="App\Repository\ColorRepository")
  */
 class Color
